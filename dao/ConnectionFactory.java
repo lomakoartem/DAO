@@ -11,9 +11,7 @@ public class ConnectionFactory {
     private static ConnectionFactory instance = new ConnectionFactory();
     public static final String URL = "jdbc:postgresql://localhost:5432/postgres";
     public static final String USER = "postgres";
-    public static final String PASSWORD = "qxR18loA21";
-    public static final String DRIVER_CLASS = "org.postgresql.Driver";
-
+    public s
     private ConnectionFactory() {
         try {
             Class.forName(DRIVER_CLASS);
@@ -28,7 +26,9 @@ public class ConnectionFactory {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
             System.out.println("ERROR: Unable to Connect to Database.");
-        }
+        }tatic final String PASSWORD = "qxR18loA21";
+    public static final String DRIVER_CLASS = "org.postgresql.Driver";
+
         return connection;
     }
 
